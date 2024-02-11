@@ -1,33 +1,33 @@
-# Aplicación de Flask con SQLite
+# Applicacion of Flask with SQLITE
 
-Programa hecho en python con el framework flask y SQLite
+The program is done in Python with the framework Flask and SQLite
 
-# Instalación
-- crear un entorno en python y ejecutar el comando
+# Instalacion
+- create a virtual enviorenment in Python and insert the commands in your Terminal
 ```
 pip install -r requirements.txt
 ```
-la libreria utilizada en flask https://flask-wtf.readthedocs.io/en/1.2.x/
+The library used in Flask https://flask-wtf.readthedocs.io/en/1.2.x/
 
-# Ejecucion del programa
- -iniciar el servidor de flask
- -en mac: 
+# Program execution
+ - start the flask server
+ - on mac: 
   ```export FLASK_APP=main.py```
- -en windows:
+ - on windows:
   ```set FLASK_APP=main.py```
 
-# Otra opción de ejecución 
-  -crear un archivo .env y dentro agregar los siguiente:
+# Another option to execute the program 
+  - create an archive .env and inside what´s next:
   ``` FLASK_APP=main.py ```
   ``` FLASK_DEBUG=True ```
-  -y luego poder ejecutar en la terminal el comando:
+  - this is to be able to execute the program with:
   ``` flask run ```
 
-# Comando para ejecutar el servidor
+# Command to execute the server
  ```flask --app main run```
 
-# Comando para ejectuar el servidor en otro puerto diferente por default siempre es el 5000
+# Command to execute the server in a different port for default different than 5000
 ```flask --app main run -p 5002```
 
-# Comando para ejecutar el servidor en modo debug, para realizar cambios en tiempo real
+# Command to execute the server in debug mode, to realize changes in real time
 ```flask --app main --debug run```
