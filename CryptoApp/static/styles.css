@@ -2,3 +2,9 @@ header,footer{
     background-color: var(--secondary);
     color: var(--secondary-inverse)
 }
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-auto-flow: auto 500px 1fr auto;
+    margin: 0
+}
