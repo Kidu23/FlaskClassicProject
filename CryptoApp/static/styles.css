@@ -1,0 +1,4 @@
+header,footer{
+    background-color: var(--secondary);
+    color: var(--secondary-inverse)
+}
