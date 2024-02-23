@@ -21,12 +21,16 @@ print("Real coins: ",len(all_coins.real_coins))
 coin_from = input("insert a coin to exchange from:").upper()#makes the input to be always uppercase
 
 
-while coin_from != "" and coin_from.isalpha():
+while coin_from != "" or not coin_from.isalpha():
     if coin_from in all_coins.crypto_coins:#this search in the list of crypto_coins if the input from coin_from exists inside
        exchange = Exchange(coin_from)
-       exchange.updateExchange(APIKEY)
+       try:
+          exchange.updateExchange(APIKEY)
+          print("rate: {:.2f}€".format(exchange.rate))
+       except ModelError as error:
+          print(error)
        
-coin_from = input("insert a coin to exchange from: ").upper()
+    coin_from = input("insert a coin to exchange from: ").upper()
 
 
 

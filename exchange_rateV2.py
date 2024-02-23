@@ -34,7 +34,7 @@ print("Number of crypto coins: ",len(crypto_coins))
 coin_from = input("insert a coin to exchange from:").upper()#makes the input to be always uppercase
 
 
-while coin_from != "" and coin_from.isalpha():
+while coin_from != "" or not coin_from.isalpha():
     if coin_from in crypto_coins:#this search in the list of crypto_coins if the input from coin_from exists inside
         url = f"https://rest.coinapi.io/v1/exchangerate/{coin_from}/EUR?apikey={APIKEY}"#this is the request to acces the link
         r = requests.get(url)#this is the request to acces the link

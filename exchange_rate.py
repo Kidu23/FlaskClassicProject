@@ -3,8 +3,8 @@ from config import APIKEY
 
 coin_from = input("insert a coin to exchange from:").upper()#makes the input to be always uppercase
 
-
-while coin_from != "" and coin_from.isalpha():
+ 
+while coin_from == "" and coin_from.isalpha():
     url = f"https://rest.coinapi.io/v1/exchangerate/{coin_from}/EUR?apikey={APIKEY}"#this is the request to acces the link
     r = requests.get(url)#this is the request to acces the link
 
@@ -18,7 +18,7 @@ while coin_from != "" and coin_from.isalpha():
         break
     else:
         print("error",dic["error"])#this if the link is wrong it will give a specific error that it´s already programed in the data of json
-
+        
     coin_from = input("insert a coin to exchange from: ").upper()
 
 
