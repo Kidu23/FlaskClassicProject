@@ -1,3 +1,5 @@
-**/entorno
+**/Venv
 **/__pycache__
+/CryptoApp/__pycache__
 **/.vscode
+**/config.py
