@@ -26,7 +26,7 @@ while coin_from != "" or not coin_from.isalpha():
        exchange = Exchange(coin_from)
        try:
           exchange.updateExchange(APIKEY)
-          print("rate: {:.2f}€".format(exchange.rate))
+          print("rate: {:.5f}€".format(exchange.rate))
        except ModelError as error:
           print(error)
        

@@ -1,3 +1,4 @@
+"""
 dic = {
   "time": "2024-02-22T19:00:07.0000000Z",
   "asset_id_base": "BTC",
@@ -7,3 +8,14 @@ dic = {
 
 print(dic["rate"])
 print(dic.get("rate"))
+"""
+import datetime
+
+   
+        
+    
+
+date = datetime.date.today()
+time = datetime.datetime.now().strftime('%H:%M:%S')
+print(date)
+print(time)
