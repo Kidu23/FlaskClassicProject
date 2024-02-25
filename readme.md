@@ -1,6 +1,6 @@
-# Applicacion of Flask with SQLITE
+# Applicacion of Flask with SQLITE and Apicoin
 
-The program is done in Python with the framework Flask and SQLite
+The program is done in Python with Apicoin and the Flask framework and SQLite
 
 # Instalacion
 - create a virtual enviorenment in Python and insert the commands in your Terminal
