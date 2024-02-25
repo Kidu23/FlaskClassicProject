@@ -26,7 +26,7 @@ coin_from = input("Enter a coin to exchange from: ").upper()#makes the input to 
 
 while coin_from != "" or not coin_from.isalpha():
     if coin_from in all_coins.total_coins:
-        quantity_from = input("Enter quantity to exchange from: ")
+        quantity_from = input(f"Enter the quantity of {coin_from} to exchange from: ")
 
         while quantity_from != "" or not quantity_from.isnumeric():
             if quantity_from.isnumeric():
@@ -40,14 +40,16 @@ while coin_from != "" or not coin_from.isalpha():
                         try:
                             exchange.updateExchange(APIKEY)
                             quantity_to =  quantity_from * exchange.rate
-                            print ("Quantity exchanged to: {:.5f}€".format(quantity_to))
+                            unit_price = quantity_from / quantity_to
+                            print(f"The quantity of {coin_to} that you exchanged to: {quantity_to:.5f} {coin_to}")
+                            print(f"Price per 1 {coin_to}: {unit_price:.5f} {coin_from}")
                             break
                         except ModelError as error:
                             print(error)
 
                     coin_to = input("Enter a coin to exchange to: ").upper()
                 break                   
-            quantity_from = input("Enter quantity to exchange from: ")
+            quantity_from = input(f"Enter the quantity of {coin_from} to exchange from: ")
       
     coin_from = input("Enter a coin to exchange from: ").upper()
 
