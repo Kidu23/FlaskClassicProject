@@ -4,5 +4,37 @@
 
 This is purchase page
 
+<form action="/action_page.php" method="get">
+    <label for="coin_choice">Choose a coin to exchange from:</label>
+    <input list="all_coins" id="coin_choice" placeholder="Coin from" name="coin_choice" />
+    
+    <datalist id="all_coins">
+      <option value="EUR"></option>
+      <option value="BTC"></option>
+      <option value="ETH"></option>
+      <option value="RON"></option>
+      <option value="GBP"></option>
+    </datalist>
+</form>
+
+<form action="/action_page.php">
+  <label for="fname">Enter the quantity you want to exchange from:</label><br>
+  <input type="number" id="fname" placeholder="Quantity from" name="fname" value="">
+</form> 
+
+<form action="/action_page.php" method="get">
+    <label for="coin_choice">Choose a coin to exchange to:</label>
+    <input list="all_coins" id="coin_choice" placeholder="Coin to" name="coin_choice" />
+    
+    <datalist id="all_coins">
+      <option value="EUR"></option>
+      <option value="BTC"></option>
+      <option value="ETH"></option>
+      <option value="RON"></option>
+      <option value="GBP"></option>
+    </datalist>
+</form>
+
+
 
 {% endblock %}

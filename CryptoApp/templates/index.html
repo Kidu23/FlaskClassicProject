@@ -2,29 +2,33 @@
 
 {% block section %}
 
-<h1>Movements List</h1>
+  <h1>Movements List</h1>
 
-<table role="grid">
-    <thead data-theme="dark">
-      <tr>
-        <th>DATE</th>
-        <th>TIME</th>
-        <th>COIN FROM</th>
-        <th>QUANTITY FROM</th>
-        <th>COIN TO</th>
-        <th>QUANTITY TO</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2024-02-11</td>
-        <td >15:00</td>
-        <td>EUR</td>
-        <td>1000</td>
-        <td>BTC</td>
-        <td>0.1</td>
-      </tr>
-      </tfoot>
-</table>
+  <table role="grid">
+      <thead data-theme="dark">
+        <tr>
+          <th>DATE</th>
+          <th>TIME</th>
+          <th>COIN FROM</th>
+          <th>QUANTITY FROM</th>
+          <th>COIN TO</th>
+          <th>QUANTITY TO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- this loop goes through the list of dic from routes index-->
+        {% for item in inform %}
+        <tr>
+          <td>{{ item.date }}</td>
+          <td >{{ item.hour }}</td>
+          <td>{{ item.coinFrom }}</td>
+          <td>{{ item.quantityFrom }}</td>
+          <td>{{ item.coinTo }}</td>
+          <td>{{ item.quantityTo }}</td>
+        </tr>
+        {% endfor %}
+
+        </tfoot>
+  </table>
 
 {% endblock %}

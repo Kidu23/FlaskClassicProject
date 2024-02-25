@@ -24,7 +24,7 @@ The library used in Flask https://flask-wtf.readthedocs.io/en/1.2.x/
   ``` flask run ```
 
 # Command to execute the server
- ```flask --app main run```
+ ```flask --app main run``` or ```flask run```
 
 # Command to execute the server in a different port for default different than 5000
 ```flask --app main run -p 5002```
