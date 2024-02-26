@@ -2,39 +2,76 @@
 
 {% block section %}
 
-This is purchase page
-
-<form action="/action_page.php" method="get">
-    <label for="coin_choice">Choose a coin to exchange from:</label>
-    <input list="all_coins" id="coin_choice" placeholder="Coin from" name="coin_choice" />
+<h1>Coin exchange</h1>
+<table>
+    <tr>
+        <td>
+            <form action="/action_page.php" method="get">
+                <label for="coin_choice">Choose a coin to exchange from:</label>
+                <input list="all_coins" id="coin_choice" placeholder="Coin from" name="coin_choice" />
+                
+                <datalist id="all_coins">
+                <option value="EUR"></option>
+                <option value="BTC"></option>
+                <option value="ETH"></option>
+                <option value="RON"></option>
+                <option value="GBP"></option>
+                </datalist>
+            </form>
+        </td>
     
-    <datalist id="all_coins">
-      <option value="EUR"></option>
-      <option value="BTC"></option>
-      <option value="ETH"></option>
-      <option value="RON"></option>
-      <option value="GBP"></option>
-    </datalist>
-</form>
 
-<form action="/action_page.php">
-  <label for="fname">Enter the quantity you want to exchange from:</label><br>
-  <input type="number" id="fname" placeholder="Quantity from" name="fname" value="">
-</form> 
-
-<form action="/action_page.php" method="get">
-    <label for="coin_choice">Choose a coin to exchange to:</label>
-    <input list="all_coins" id="coin_choice" placeholder="Coin to" name="coin_choice" />
     
-    <datalist id="all_coins">
-      <option value="EUR"></option>
-      <option value="BTC"></option>
-      <option value="ETH"></option>
-      <option value="RON"></option>
-      <option value="GBP"></option>
-    </datalist>
-</form>
+        <td>
+            <form action="/action_page.php" method="get">
+                <label for="coin_choice">Choose a coin to exchange to:</label>
+                <input list="all_coins" id="coin_choice" placeholder="Coin to" name="coin_choice" />
+                
+                <datalist id="all_coins">
+                <option value="EUR"></option>
+                <option value="BTC"></option>
+                <option value="ETH"></option>
+                <option value="RON"></option>
+                <option value="GBP"></option>
+                </datalist>
+            </form>
+        </td>
+    </tr>
 
+<tr> 
+    <td> 
+        <form action="/action_page.php">
+        <label for="fname">Enter the quantity you want to exchange from:</label><br>
+        <input type="number" id="fname" placeholder="Quantity from" name="fname" value="">
+        </form>
+    </td>
+    
+    <td>
+        <label >Price per unit:</label>
+        <table>
+            <tr>
+                <td style="text-align: center;">Price</td>
+            </tr>
+        
+        </table>
+    </td>
+</tr>
+</table>
+
+<table>
+    <tr>
+        <td style="text-align: center;">
+            <table>
+                <label >Quantity to:</label>
+                        <table>
+                            <tr>
+                                <td style="text-align: center;">Quantity</td>
+                            </tr>
+                        </table>
+            </table>
+         </td>
+    </tr>
+</table>
 
 
 {% endblock %}
