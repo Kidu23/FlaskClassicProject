@@ -2,6 +2,8 @@
 
 {% block section %}
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 <h1>Coin exchange</h1>
 <table>
     <tr>
@@ -44,19 +46,17 @@
         <label for="fname">Enter the quantity you want to exchange from:</label><br>
         <input type="number" id="fname" placeholder="Quantity from" name="fname" value="">
         </form>
-    </td>
-    
     <td>
         <label >Price per unit:</label>
         <table>
             <tr>
                 <td style="text-align: center;">Price</td>
-            </tr>
-        
+            </tr>        
         </table>
     </td>
 </tr>
 </table>
+
 
 <table>
     <tr>
@@ -68,10 +68,22 @@
                                 <td style="text-align: center;">Quantity</td>
                             </tr>
                         </table>
+                        <a href="#">
+                        <span class="material-symbols-outlined" style="font-size: 50px;">
+                            calculate
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="material-symbols-outlined" style="font-size: 50px;">
+                                done_outline
+                                </span>
+                            </a>                              
+                    </td>
             </table>
          </td>
     </tr>
 </table>
+
 
 
 {% endblock %}
